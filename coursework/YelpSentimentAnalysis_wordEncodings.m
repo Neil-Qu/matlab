@@ -88,8 +88,8 @@ numClasses = numel(categories(YTrain));
 layers = [ ...
     sequenceInputLayer(inputSize)
     wordEmbeddingLayer(embeddingDimension,numHiddenUnits)
-    lstmLayer(hiddenSize,'OutputMode','last')
-    fullyConnectedLayer(numClasses)
+    lstmLayer(hiddenSize,'OutputMode','last') 
+    fullyConnectedLayer(numClasses) % given (positive, negative)
     softmaxLayer
     classificationLayer]
 
